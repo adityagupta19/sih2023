@@ -7,13 +7,30 @@ const menuItems = [
 		href: "/",
 	},
 	{
-		name: "About",
+		name: "About Us",
 		href: "/#about",
 	},
 	{
-		name: "Contact",
-		href: "#",
+		name: "Coupons",
+		href: "/shop",
 	},
+	{
+		name:"Events",
+		href:"/Events"
+	},{
+		name:"Login",
+		href:"/login"
+	},
+	{
+		name:"Host",
+		href:"/events/host"
+	},{
+		name:"FAQ",
+		href:"/"
+	},{
+		name:"LeaderBoard",
+		href:"/leaderboard"
+	}
 ];
 
 export function ExampleNavbarOne() {

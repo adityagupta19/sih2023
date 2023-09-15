@@ -11,9 +11,11 @@ app.use(cors());
 
 const userRoutes = require('./routes/user');
 const eventRoutes = require('./routes/event');
+const { leaderBoard } = require('./controllers/userControllers');
 
 app.use('/event',eventRoutes);
 app.use('/user',userRoutes);
+app.get('/leaderboard',leaderBoard)
 
 
 

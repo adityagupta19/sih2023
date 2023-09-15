@@ -9,6 +9,8 @@ import Login from "./screens/Login";
 import { SignUp } from "./components/Signup";
 import Host from "./components/Host";
 import EventPage from "./components/EventPage";
+import Shop from "./components/Shop";
+import LeaderboardTable from "./components/leaderboardTable";
 function App() {
   //localStorage.setItem("userid","");
 	return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/signup" element={<SignUp/>}/>
         <Route path="/events/host" element={<Host/>}/>
         <Route path="/events/:eventid" element={<EventPage/>}/>
+        <Route path="/shop" element={<Shop/>}/>
+        <Route path="/leaderboard" element={<LeaderboardTable/>}/>
       </Routes>
       </BrowserRouter>
 		</div>

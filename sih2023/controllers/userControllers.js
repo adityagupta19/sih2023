@@ -52,4 +52,10 @@ const login = async (req, res) => {
 	}
 };
 
-module.exports = { login, getUser, createUser };
+const leaderBoard = async (req,res) => {
+	const users = await User.find({}).sort({points:-1});
+	res.status(200).json(users);
+
+}
+
+module.exports = { login, getUser, createUser, leaderBoard };

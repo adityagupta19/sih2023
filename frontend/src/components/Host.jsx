@@ -17,7 +17,8 @@ const Host = () => {
 	const handleChange = (e) => {
 		setData({ ...data, [e.target.name]: e.target.value });
 	};
-	const handleImage = (e) => {
+	const handleImage = async (e) => {
+        console.log(1);
 		const imageData = new FormData();
 		imageData.append("file", e.target.files[0]);
 		imageData.append("upload_preset", "syncfit");
@@ -29,7 +30,7 @@ const Host = () => {
 		})
 			.then((res) => res.json())
 			.then((imageUpData) => {
-				
+				console.log(imageUpData.url)
 				setData({ ...data, [e.target.name]: imageUpData.url });
 				
 			});
@@ -177,7 +178,7 @@ if(localStorage.getItem("userid")!== "" && isSubmitted) {
 										type="file"
 										placeholder="Event Display Image"
 										id="image"
-										name="imgageUrl"
+										name="imageUrl"
 										onChange={handleImage}
 									></input>
 								</div>
