@@ -6,12 +6,12 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-export function EventCard({eventName,imageUrl,venue,date,host,isVerified,desc,eventid}) {
+export function EventCard({eventName,imageUrl,venue,date,host,isVerified,desc,eventid,page}) {
   
   const navigate = useNavigate();
   const handleEvent = () => {
     
-    navigate(`/events/${eventid}`)
+    navigate(`/${page}/${eventid}`)
   
     
   }
@@ -34,9 +34,9 @@ export function EventCard({eventName,imageUrl,venue,date,host,isVerified,desc,ev
             {desc.substring(0,100)+" ..."}
           </p>
           <div className="mt-4">
-            <span className="mb-2 mr-2 inline-block rounded-full bg-green-400 px-3 py-1 text-[12px] font-semibold text-gray-900">
-              {isVerified && <span>verified</span>}
-            </span>
+            
+              {isVerified && <span className="mb-2 mr-2 inline-block rounded-full bg-green-400 px-3 py-1 text-[12px] font-semibold text-gray-900">verified</span>}
+        
           </div>
           <div className="mt-3 flex justify-between">
             <span className="flex flex-col text-black">

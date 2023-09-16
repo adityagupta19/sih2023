@@ -12,10 +12,15 @@ app.use(cors());
 const userRoutes = require('./routes/user');
 const eventRoutes = require('./routes/event');
 const { leaderBoard } = require('./controllers/userControllers');
+const { getBlogs, getBlog, createBlog } = require('./controllers/blogController');
 
 app.use('/event',eventRoutes);
 app.use('/user',userRoutes);
 app.get('/leaderboard',leaderBoard)
+app.get('/blog',getBlogs)
+app.get('/blog/:id',getBlog)
+app.post('/blog',createBlog)
+
 
 
 

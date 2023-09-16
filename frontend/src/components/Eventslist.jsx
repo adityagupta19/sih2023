@@ -34,7 +34,7 @@ const Eventslist = () => {
         </div>
         <div className="mt-4 flex flex-wrap justify-between">
     {events.map((event)=>{
-        return <EventCard key={event._id} eventName={event.eventName} imageUrl={event.imageUrl} venue={event.venue} date={event.date} host={event.host} isVerified={true} desc={event.desc} eventid={event._id} />
+        return <EventCard key={event._id} eventName={event.eventName} imageUrl={event.imageUrl} venue={event.venue} date={event.date} host={event.host} isVerified={true} desc={event.desc} eventid={event._id} page="events" />
     })}
     </div>
     </div>;

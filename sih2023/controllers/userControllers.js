@@ -57,5 +57,30 @@ const leaderBoard = async (req,res) => {
 	res.status(200).json(users);
 
 }
+const ranking = async (req,res) => {
+	
+	const {id} = req.params;
+	if (!mongoose.Types.ObjectId.isValid(id)) {
+		return res.status(404).json({ error: "No such json." });
+	}
+	try {
+		const users = await User.find({}).sort({points:-1});
+		count = 0;
+        users.map(user=>{
+			if(user._id.toString() === id ){
+				res.status(200).json({"rank":count+1});
+			}
+			count++;
+		})
+		if(count==0){
+		res.status(404).json({error:"User not found"});
+		}
+		
+	} catch (err) {
+		res.status(404).json(err);
+	}
 
-module.exports = { login, getUser, createUser, leaderBoard };
+
+}
+
+module.exports = { login, getUser, createUser, leaderBoard,ranking };

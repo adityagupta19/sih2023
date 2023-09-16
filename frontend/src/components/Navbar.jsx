@@ -15,22 +15,25 @@ const menuItems = [
 		href: "/shop",
 	},
 	{
-		name:"Events",
-		href:"/Events"
-	},{
-		name:"Login",
-		href:"/login"
+		name: "Events",
+		href: "/Events",
 	},
 	{
-		name:"Host",
-		href:"/events/host"
-	},{
-		name:"FAQ",
-		href:"/"
-	},{
-		name:"LeaderBoard",
-		href:"/leaderboard"
-	}
+		name: "Login",
+		href: "/login",
+	},
+	{
+		name: "Host",
+		href: "/events/host",
+	},
+	{
+		name: "Blogs",
+		href: "/blogs",
+	},
+	{
+		name: "Leader Board",
+		href: "/leaderboard",
+	},
 ];
 
 export function ExampleNavbarOne() {
@@ -39,11 +42,13 @@ export function ExampleNavbarOne() {
 	};
 
 	return (
-		<div className="relative w-full bg-green-400">
+		<div className="relative w-full bg-white">
 			<div className="mx-auto flex max-w-7xl items-center justify-between ml-8 px-4 py-4 sm:px-6 lg:px-8">
 				<div className="inline-flex items-center pr-16">
-					<img src={Logo} className="min-w-[40px] min-h-[40px]" alt="logo" />
-					<span className="text-lg font-bold text-white"></span>
+					<a href="/">
+						<img src={Logo} className="min-w-[52px] min-h-[62px]" alt="logo" />
+						<span className="text-lg font-bold text-white"></span>
+					</a>
 				</div>
 				<div className="hidden lg:block">
 					<ul className="inline-flex space-x-8">
@@ -51,7 +56,7 @@ export function ExampleNavbarOne() {
 							<li key={item.name}>
 								<a
 									href={item.href}
-									className="text-md font-bold text-gray-800 hover:text-white"
+									className="text-lg font-bold text-gray-800 hover:text-green-400"
 								>
 									{item.name}
 								</a>

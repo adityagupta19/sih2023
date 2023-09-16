@@ -13,15 +13,16 @@ export function Hero() {
 			<div className="absolute "></div>
 			<div className="absolute top-32 left-16 text-left max-w-[700px]">
 				<h1 className="text-5xl font-bold text-white">SyncFit</h1>
-        <h2 className="pt-6 text-2xl font-bold text-green-400">
+				<h2 className="pt-6 text-2xl font-bold text-green-400">
 					No More 'Event hi nahi hote' excuses
 				</h2>
 				<p className="mt-6 text-lg text-gray-300">
 					"Empowering a healthier world through fitness. Join our platform for
-					enthusiasts and event organizers, together reshaping the fitness
-					industry and fostering a lasting fitness-focused community
+					both participating and organizing physical events, together reshaping
+					the fitness industry and fostering a lasting fitness-focused
+					community"
 				</p>
-				
+
 				<button
 					onClick={() => {
 						navigate("/events");
