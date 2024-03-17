@@ -14,7 +14,7 @@ const Login = () => {
 	};
     const handleSubmit = async()=>{
         console.log(data);
-        const res = await fetch("http://localhost:4000/user/login",{
+        const res = await fetch("https://syncfit.onrender.com/user/login",{
             method:"POST",
             headers:{
                 "content-Type":"application/json"

@@ -8,7 +8,7 @@ const BlogPage = () => {
 	const { id } = params;
 
     useEffect(() => {
-		let url = `http://localhost:4000/blog/${id}`;
+		let url = `https://syncfit.onrender.com/blog/${id}`;
 
 		axios.get(url).then((res) => {
 			setBLog(res.data);

@@ -18,7 +18,7 @@ const LeaderboardTable = () => {
     const [users,setUsers] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:4000/leaderboard").then(
+        axios.get("https://syncfit.onrender.com/leaderboard").then(
             (res) => setUsers(res.data)
         )
     })

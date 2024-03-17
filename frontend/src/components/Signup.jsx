@@ -33,7 +33,7 @@ export function SignUp() {
 
     const handleSubmit = async()=>{
         
-        const res = await fetch("http://localhost:4000/user/signup",{
+        const res = await fetch("https://syncfit.onrender.com/user/signup",{
             method:"POST",
             headers:{
                 "content-Type":"application/json"

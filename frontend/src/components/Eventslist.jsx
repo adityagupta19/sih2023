@@ -9,7 +9,7 @@ const Eventslist = () => {
     ]);
     const navigate = useNavigate();
     useEffect(() => {
-		let url = `http://localhost:4000/event`;
+		let url = `https://syncfit.onrender.com/event`;
 
 		axios.get(url).then((res) => {
 			setEvents(res.data);

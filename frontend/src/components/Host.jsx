@@ -40,7 +40,7 @@ const Host = () => {
 
         
         console.log(data);
-        const res = await fetch("http://localhost:4000/event/host",{
+        const res = await fetch("https://syncfit.onrender.com/event/host",{
             method:"POST",
             headers:{
                 "content-Type":"application/json"

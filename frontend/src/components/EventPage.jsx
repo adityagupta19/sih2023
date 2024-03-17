@@ -12,7 +12,7 @@ const EventPage = () => {
 		let userid = localStorage.getItem("userid");
 		if (localStorage.getItem("userid") !== "") {
 			const res = await fetch(
-				`http://localhost:4000/event/${eventid}/register`,
+				`https://syncfit.onrender.com/event/${eventid}/register`,
 				{
 					method: "POST",
 					headers: {
@@ -30,7 +30,7 @@ const EventPage = () => {
 	};
 
 	useEffect(() => {
-		let url = `http://localhost:4000/event/${eventid}`;
+		let url = `https://syncfit.onrender.com/event/${eventid}`;
 
 		axios.get(url).then((res) => {
 			setEvent(res.data);

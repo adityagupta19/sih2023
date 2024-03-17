@@ -6,8 +6,8 @@ const ProfilePage = () => {
     const [rank,setRank] = useState(0);
 
 	useEffect(() => {
-		let url = `http://localhost:4000/user/${localStorage.getItem("userid")}`;
-        let url2 = `http://localhost:4000/user/ranking/${localStorage.getItem("userid")}`
+		let url = `https://syncfit.onrender.com/user/${localStorage.getItem("userid")}`;
+        let url2 = `https://syncfit.onrender.com/user/ranking/${localStorage.getItem("userid")}`
 		axios.get(url).then((res) => {
 			setUser(res.data);
 		});

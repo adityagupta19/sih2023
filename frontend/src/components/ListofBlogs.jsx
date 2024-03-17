@@ -9,7 +9,7 @@ const ListofBlogs = () => {
     ]);
     
     useEffect(() => {
-		let url = `http://localhost:4000/blog`;
+		let url = `https://syncfit.onrender.com/blog`;
 
 		axios.get(url).then((res) => {
 			setEvents(res.data);

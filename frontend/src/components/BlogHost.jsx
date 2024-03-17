@@ -29,7 +29,7 @@ export function BlogHost() {
 	};
 
 	const handleSubmit = async () => {
-		const res = await fetch("http://localhost:4000/blog", {
+		const res = await fetch("https://syncfit.onrender.com/blog", {
 			method: "POST",
 			headers: {
 				"content-Type": "application/json",
